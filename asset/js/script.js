@@ -84,12 +84,13 @@ var x = setInterval(function () {
     <div class="col-lg-1 col-3"><div class="text-center p-2 rounded"><h5>${minutes}</h5> Menit</div></div>
     <div class="col-lg-1 col-3"><div class="text-center p-2 rounded"><h5>${seconds}</h5> Detik</div></div>
     `
+    if (distance < 0) {
+        clearInterval(x)
+        document.getElementById('countdown-wedding').innerHTML = "<span class'text-center p-3 rounded m-2><h2>Sudah dimulai!</h2></span>"
+    }
 })
 
-if (distance < 0) {
-    clearInterval(x)
-    document.getElementById('countdown-wedding').innerHTML = "<span class'text-center p-3 rounded m-2><h2>Sudah dimulai!</h2></span>"
-}
+
 
 
 // rsvp
